@@ -1,0 +1,56 @@
+// Biến
+$background-color-box: #FFF3F1;
+$primary-color: #FF9900;
+$text-grey-light: #9B9B9B;
+$text-grey-dark: #9B9B9B;
+$carouselTransitionSpeed: transform 0.3s ease;
+
+//reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inter';
+    font-size: 62.5%;
+}
+
+#main {
+    width: calc(100% - 64px);
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+// import link
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+
+// import file
+@import '../scss/utilities';
+@import '../scss/product';
+@import '../scss/responsive';
+
+@import "../scss/layouts/header";
+@import "../scss/layouts/footer";
+
+
+
+

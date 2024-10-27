@@ -1,0 +1,142 @@
+
+
+/* Fixed bar */
+#fixed-bar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#top-banner {
+    position: relative;
+    top: 0;
+    background-color: black;
+    text-align: center;
+    height: 40px;
+    transition: height 0.3s ease;
+
+    a {
+        line-height: 40px;
+        font-size: 1.6rem;
+        color: white;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+}
+
+.header {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    padding: 0 30px;
+    border-bottom: 2px solid #e1e1e1;
+
+    &__logo {
+        height: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    &__items {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        height: 100%;
+
+        li, a {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        height: 100%;
+        margin: 0 5px;
+        position: relative;
+
+        &--active::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: #000;
+        }
+    }
+
+    &__link {
+        font-size: 1.6rem;
+        color: #000; 
+        text-transform: uppercase;
+        padding: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        border-radius: 6px;
+        position: relative;
+
+        &:hover {
+            background-color: rgba(74, 74, 74, 0.07);
+        }
+
+        .cart-count {
+            display: none;
+            font-size: 1.2rem;
+            position: absolute;
+            width: 22px;
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+            background-color: $primary-color;
+            color: #fff;
+            border-radius: 10px;
+            top: 3px;
+            right: -3px;
+        }
+    }
+
+    &__icon {
+        font-size: 2.2rem;
+    }
+}
+
+
+.nav-header {
+    background-color: #fff;
+
+    &__items {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+    }
+    
+    &__link {
+        display: inline-block;
+        font-size: 1.6rem;
+        color: #000;
+        padding: 14px 15px;
+        font-weight: 300;
+
+
+        &:hover {
+            font-weight: 500;
+        }
+    }
+
+    &__link--special {
+        color: #FF9900;
+    }
+
+}

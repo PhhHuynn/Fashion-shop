@@ -1,0 +1,78 @@
+@import "../common";
+
+.container {
+    width: 100%;
+    min-height: 80vh;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/img/bg.png');
+    background-size: 160%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: background-position 0.1s;
+
+}
+
+
+.sale-time-setup {
+    position: relative;
+    z-index: 10;
+    min-height: 100%;
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+
+    h1 {
+       font-size: 60px;
+       text-shadow: 1px 1px 2px #0000006c;
+       
+    }
+
+    h1 span {
+        color: $primary-color;
+    }
+
+    &__input-box {
+        margin: 40px 0;
+        padding: 35px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+        display: flex;
+        align-items: center;
+
+        input {
+            flex: 1;
+            margin-right: 20px;
+            padding: 14px 20px;
+            outline: none;
+            border: none;
+            background-color: #fff;
+            font-size: 18px;
+            border-radius: 5px;
+            color: #666;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            font-size: 14px;
+            background-color: $primary-color;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 500;
+            color: #333;
+            cursor: pointer;
+        }
+    }
+}
+

@@ -1,0 +1,104 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/cart.css">
+    <link rel="stylesheet" href="src/css/grid.css">
+</head>
+<body>
+    <div id="fixed-bar"></div>
+
+    <div class="grid wide">
+        <main id="main">
+            <div class="cart">
+                <h2 class="cart__title">Giỏ hàng của bạn</h2>
+            
+                <div class="cart-empty">
+                    <div class="cart-empty__container">
+                        <img src="https://lucaga.com/assets/images/no-cart.png" alt="Giỏ hàng trống" >
+                        <p class="cart-empty__text">Giỏ hàng trống</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col l-8">
+                        <section class="cart-summary">
+                            <div class="cart-summary__header">
+                                <p>Sản phẩm</p>
+                                <p>Giá tiền</p>
+                                <p>Số lượng</p>
+                                <p>Tổng</p>
+                                <p><input type="checkbox" class="select-all-checkbox"></p>
+                                
+                            </div>
+                            <div class="cart-summary__items">
+                                
+                            </div>
+                            <div class="cart-summary__footer">
+                                <a href="home.html">Trở về cửa hàng</a>
+                                <button id="deleteSelectedBtn">Xóa (<span class="selectedCount">0</span>)</button>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col l-4">
+                        <div class="cart-total">
+                            <div class="cart-total__title">Tổng giá tiền</div>
+                            <div class="cart-total__items">
+                                <div class="cart-total__item">
+                                    <span class="cart-total__label">Tổng tiền hàng</span>
+                                    <span class="cart-total__value" id="total-price">400.000 đ</span>
+                                </div>
+                                <div class="cart-total__item">
+                                    <span class="cart-total__label">Phí vận chuyển</span>
+                                    <span class="cart-total__value" id="shipping-fee">Miễn phí</span>
+                                </div>
+                                <div class="cart-total__item">
+                                    <span class="cart-total__label">Voucher giảm giá</span>
+                                    <span class="cart-total__value" id="discount">Không có</span>
+                                </div>
+                                <div class="cart-total__total cart-total__item">
+                                    <span class="cart-total__label">Tổng thanh toán</span>
+                                    <span class="cart-total__value" id="total-payment">400.000 đ</span>
+                                </div>
+                            </div>
+                            
+                            <button class="cart-total__button" id="checkoutButton">Đặt hàng</button>
+                        </div>
+                        <div class="cart-voucher">
+                            <div class="cart-voucher__row">
+                                <p>Mã giảm giá</p>
+                                <button id="BtnVoucher">Áp dụng</button>
+                            </div>
+                            <div class="cart-voucher__row">
+                                <input type="text" id="cart-voucher__input" placeholder="Nhập mã" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+
+            <div class="recommended">
+                <div class="recommended__text">
+                    <h3>Có thể bạn sẽ thích</h3>
+                    <p>Xem tất cả ></p>
+                </div>
+                <div class="product-list">
+                    <div class="row">
+                        <div class="product-list__wrap" data-category="recommended">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer"></footer>
+    <script type="module" src="src/js/index.js"></script>
+    <script src="src/js/features/handleImageError.js"></script>
+    <script type="module" src="src/js/features/cart.js"></script>
+</body>
+</html>
